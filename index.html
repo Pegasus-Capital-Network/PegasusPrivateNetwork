@@ -1,170 +1,348 @@
-<!DOCTYPE html><html lang="en"><head>
-<title>Pegasus Private Network — Tokenized real estate & digital assets</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="A forming community of investors interested in tokenized real estate and digital assets. Register your interest — early access as compliant offerings open through licensed partners.">
-<link rel="canonical" href="https://pegasusprivatenetwork.com/">
-<meta property="og:title" content="Pegasus Private Network">
-<meta property="og:description" content="A forming investor community for tokenized real estate and digital assets. Register your interest.">
-<meta property="og:type" content="website">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300&family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --ink:#0a0d14;--ink2:#111622;--panel:#161d2c;--line:rgba(226,232,240,.10);
-  --ivory:#f3efe6;--ivory-dim:#c7cdd6;--muted:#8793a3;
-  --gold:#c9a85c;--violet:#8b7bd8;
-  --sans:'Inter',system-ui,sans-serif;--serif:'Fraunces',Georgia,serif;--mono:'IBM Plex Mono',monospace;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:var(--ink);color:var(--ivory);font-family:var(--sans);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1040px;margin:0 auto;padding:0 32px}
-@media(max-width:720px){.wrap{padding:0 20px}}
-.field{position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(900px 520px at 72% -8%,rgba(139,123,216,.14),transparent 60%),radial-gradient(700px 440px at 12% 2%,rgba(201,168,92,.07),transparent 55%)}
-header.top{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;padding:22px 32px;max-width:1040px;margin:0 auto}
-.brand{display:flex;align-items:center;gap:11px;font-family:var(--serif);font-size:19px}
-.brand .mk{width:26px;height:26px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:13px}
-.top .back{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.04em}
-.top .back:hover{color:var(--ivory)}
-.hero{position:relative;z-index:2;padding:60px 0 30px}
-.eyebrow{font-family:var(--mono);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:flex;align-items:center;gap:12px}
-.eyebrow::before{content:"";width:34px;height:1px;background:var(--gold);opacity:.6}
-h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,5.4vw,62px);line-height:1.03;letter-spacing:-.02em;max-width:16ch}
-h1 em{font-style:italic;color:var(--gold)}
-.lede{margin-top:22px;font-size:clamp(15px,1.9vw,18px);color:var(--ivory-dim);max-width:60ch}
-.status-line{margin-top:26px;display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;color:var(--muted);border:1px solid var(--line);border-radius:2px;padding:8px 14px}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--gold)}
-.cols{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:32px 0 18px}
-@media(max-width:800px){.cols{grid-template-columns:1fr}}
-.col{background:var(--ink2);padding:32px 30px;display:flex;flex-direction:column}
-.col .tier{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.col h2{font-family:var(--serif);font-weight:400;font-size:25px;margin-bottom:8px}
-.col p.d{font-size:13.5px;color:var(--ivory-dim);margin-bottom:18px;flex:1}
-.fld{margin-bottom:12px}
-.fld label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
-.fld input,.fld select{width:100%;background:var(--ink);border:1px solid var(--line);color:var(--ivory);font-family:var(--sans);font-size:14px;padding:11px 13px;border-radius:2px}
-.fld input:focus,.fld select:focus{outline:none;border-color:var(--gold)}
-.submit{width:100%;margin-top:6px;background:var(--gold);color:#1a1205;border:none;font-family:var(--sans);font-weight:600;font-size:14px;padding:12px;border-radius:2px;cursor:pointer}
-.submit:hover{opacity:.92}.submit:disabled{opacity:.5}
-.merr{color:#e8836f;font-size:12px;min-height:15px;margin-top:8px}
-.done{padding:10px 0}.done .chk{width:46px;height:46px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:22px;margin-bottom:14px}
-.done h3{font-family:var(--serif);font-weight:400;font-size:21px;margin-bottom:7px}.done p{font-size:13.5px;color:var(--ivory-dim)}
-.how{position:relative;z-index:2;padding:40px 0;border-top:1px solid var(--line);margin-top:30px}
-.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
-@media(max-width:800px){.how-grid{grid-template-columns:1fr;gap:22px}}
-.how h4{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.how p{font-size:14px;color:var(--ivory-dim)}
-.legal{position:relative;z-index:2;margin:28px 0 10px;padding:22px 24px;border:1px solid var(--line);border-radius:6px;background:rgba(139,123,216,.05)}
-.legal .lh{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.legal p{font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:8px}
-footer{position:relative;z-index:2;border-top:1px solid var(--line);padding:30px 0 60px;margin-top:20px}
-footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-footer .fnote{font-family:var(--mono);font-size:10.5px;color:var(--muted);max-width:64ch;line-height:1.7}
-.toast{position:fixed;left:50%;bottom:28px;transform:translateX(-50%);background:#161d2c;color:#fff;padding:12px 20px;border-radius:10px;font-size:13px;z-index:9500;box-shadow:0 10px 30px rgba(0,0,0,.35);max-width:90vw;text-align:center}
-</style></head>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pegasus Private Network | Digital Asset Education</title>
+  <meta name="description" content="A private educational gateway for real-asset tokenization, digital ownership, primary issuance, investor management, and future marketplace infrastructure." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="canonical" href="https://pegasusprivatenetwork.com/" />
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "x8mpt9ba7l");
+</script></head>
 <body>
-<div class="field"></div>
-<header class="top">
-  <a class="brand" href="/"><span class="mk">✦</span> Pegasus Private Network</a>
-  <a class="back" href="https://pegasuscapitalnetwork.com">← pegasuscapitalnetwork.com</a>
-</header>
+  <header class="nav">
+    <a class="brand" href="#top"><span class="mark">◇</span> PEGASUS <em>Private Network</em></a>
+    <nav>
+      <a href="#start">Start Here</a>
+      <a href="#tokenization">Tokenization 101</a>
+      <a href="#dashboards">Dashboards</a>
+      <a href="#issuance">Issuance</a>
+      <a href="#marketplace">Marketplace</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact" class="nav-cta">Request Access</a>
+    </nav>
+  </header>
 
-<section class="hero"><div class="wrap">
-  <div class="eyebrow">Pegasus Private Network</div>
-  <h1>Access to <em>tokenized real estate</em>, being built the right way.</h1>
-  <p class="lede">The private markets are opening to more investors. Pegasus Private Network is forming a community around tokenized real estate and digital assets — with transparent rights, quality assets, and compliant access through licensed partners. Register your interest and be early.</p>
-  <div class="status-line"><span class="dot"></span> Community forming · interest only, no offering yet</div>
-</div></section>
+  <main id="top">
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg">
+        <source src="assets/video/pegasus-hero-lite.mp4" type="video/mp4" />
+      </video>
+      <div class="grain"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Private Digital Asset Network</p>
+        <h1>Real assets. Digital units. Private access.</h1>
+        <p class="lead">A private gateway for people learning how real estate and other real-world assets can be structured, digitized, managed, and eventually traded inside a controlled network.</p>
+        <div class="hero-actions">
+          <a href="#start" class="button primary">Start Here</a>
+          <a href="https://pegasuscapitalnetwork.com" class="button ghost">Enter Capital Network</a>
+        </div>
+      </div>
+      <div class="scroll-note">Scroll</div>
+    </section>
 
-<div class="wrap">
-  <div class="cols">
-    <div class="col" id="col-everyday">
-      <div class="tier">Everyday Investors</div>
-      <h2>Start small, learn, be early</h2>
-      <p class="d">For people who want to explore smaller positions in tokenized real estate as compliant mechanisms open. Tell us the range you'd consider — this helps us research real demand. It is not a commitment and not an offer.</p>
-      <div class="fld"><label>Name</label><input id="eName" placeholder="Full name"></div>
-      <div class="fld"><label>Email</label><input id="eEmail" type="email" placeholder="you@email.com"></div>
-      <div class="fld"><label>Range you'd consider</label>
-        <select id="eBand"><option value="">Select…</option><option>$100–500</option><option>$500–1,000</option><option>$1,000–5,000</option><option>$5,000–25,000</option><option>Just exploring</option></select></div>
-      <div class="fld"><label>What interests you</label><input id="eAreas" placeholder="e.g. multifamily, development, income property"></div>
-      <button class="submit" id="eSubmit" onclick="joinPN('everyday')">Register my interest →</button>
-      <div class="merr" id="eErr"></div>
-    </div>
-    <div class="col" id="col-accredited">
-      <div class="tier">Private & Accredited</div>
-      <h2>Larger allocations & projects</h2>
-      <p class="d">For accredited investors, family offices, and investment firms considering larger positions in curated projects. Register to be contacted as compliant opportunities are structured through licensed partners.</p>
-      <div class="fld"><label>Name</label><input id="aName" placeholder="Full name"></div>
-      <div class="fld"><label>Email</label><input id="aEmail" type="email" placeholder="you@firm.com"></div>
-      <div class="fld"><label>Firm / family office</label><input id="aOrg" placeholder="Organization (optional)"></div>
-      <div class="fld"><label>Typical allocation</label>
-        <select id="aBand"><option value="">Select…</option><option>$25k–100k</option><option>$100k–500k</option><option>$500k–2M</option><option>$2M+</option></select></div>
-      <div class="fld"><label>Accredited investor?</label>
-        <select id="aAcc"><option value="">Select…</option><option>Yes, I believe I qualify</option><option>Not sure</option><option>No</option></select></div>
-      <button class="submit" id="aSubmit" onclick="joinPN('accredited')">Register my interest →</button>
-      <div class="merr" id="aErr"></div>
-    </div>
-  </div>
-</div>
+    <section id="start" class="section intro reveal">
+      <p class="section-index">01 — Start here</p>
+      <div class="statement-grid compact">
+        <h2>Before anyone buys a token, they need to understand what the token represents.</h2>
+        <div class="text-block">
+          <p>Tokenization is not magic. It is a digital layer placed on top of a real legal and financial structure. The asset can be real estate, private credit, development equity, income-producing property, infrastructure, a redevelopment program like Pacific Palisades, or another real-world asset.</p>
+          <p>The purpose of Pegasus Private Network is to make that first step comfortable: clear education, private access, qualified participation, and a path toward digital ownership infrastructure.</p>
+        </div>
+      </div>
+      <div class="entry-grid">
+        <article><span>Asset</span><p>A real-world asset with economics, documents, rights, risks, and a story.</p></article>
+        <article><span>Structure</span><p>A legal and financial wrapper that defines who owns what and how participation works.</p></article>
+        <article><span>Digital unit</span><p>A token or digital record that represents approved participation in that structure.</p></article>
+        <article><span>Network</span><p>A private environment where access, review, compliance, communication, and transfers can be controlled.</p></article>
+      </div>
+    </section>
 
-<section class="how"><div class="wrap"><div class="how-grid">
-  <div><h4>Accessible entry</h4><p>As compliant mechanisms open, tokenized positions can start far smaller than traditional private real estate. We're building for that.</p></div>
-  <div><h4>Transparent rights</h4><p>Quality assets, clear terms, and honest risk. A tokenized position is not a guaranteed return, and resale depends on the legal framework and a market existing.</p></div>
-  <div><h4>Compliant by design</h4><p>Any actual offering happens only through licensed, registered partners under the applicable rules. Pegasus builds the community and the infrastructure, not an unregistered securities sale.</p></div>
-</div></div></section>
+    <section id="tokenization" class="section education reveal">
+      <p class="section-index">02 — Tokenization 101</p>
+      <h2>What tokenization means in plain English.</h2>
+      <div class="education-grid">
+        <article class="education-card large-card">
+          <h3>Plain definition</h3>
+          <p>A real asset is placed into an approved structure. Participation in that structure is divided into digital units. Those units may represent economic rights, access rights, income participation, ownership records, or transfer rights depending on the documents and legal design.</p>
+        </article>
+        <article class="education-card">
+          <h3>It is not just crypto</h3>
+          <p>The asset comes first. Blockchain or digital ledger technology is only the recordkeeping and transfer layer.</p>
+        </article>
+        <article class="education-card">
+          <h3>It is not public noise</h3>
+          <p>A serious digital asset network controls access, eligibility, documents, communications, and compliance.</p>
+        </article>
+        <article class="education-card">
+          <h3>It is not guaranteed income</h3>
+          <p>Returns, liquidity, and transferability depend on the asset, structure, market, and legal permissions.</p>
+        </article>
+      </div>
+    </section>
 
-<div class="wrap">
-  <div class="legal">
-    <div class="lh">Important — please read</div>
-    <p>This page collects expressions of interest for research and community-building only. It is not an offer to sell or a solicitation to buy any security, token, or investment, and it does not provide access to any offering.</p>
-    <p>Pegasus is not a broker-dealer, funding portal, investment adviser, or exchange, and does not raise capital, sell securities, custody assets, or guarantee returns, liquidity, or availability. Any future investment opportunity would be made only through appropriately licensed and registered intermediaries, under Regulation CF, Regulation A+, Regulation D, or other applicable rules, with its own disclosures. Tokenized real estate carries significant risk, including loss of principal and limited or no resale market. Registering interest creates no obligation on either side.</p>
-  </div>
-</div>
+    <section class="section process reveal">
+      <p class="section-index">03 — How it works</p>
+      <h2>From real asset to digital ownership layer.</h2>
+      <div class="process-grid">
+        <article><span>01</span><h3>Asset review</h3><p>Review the property, development, income stream, collateral, sponsor, documents, risk profile, and potential investor fit.</p></article>
+        <article><span>02</span><h3>Legal structure</h3><p>Create the entity, rights, disclosures, offering terms, transfer rules, investor eligibility, and compliance workflow.</p></article>
+        <article><span>03</span><h3>Digital issuance</h3><p>Convert approved participation into digital units, tokens, or electronic records connected to the underlying structure.</p></article>
+        <article><span>04</span><h3>Investor onboarding</h3><p>Use KYC, AML, accreditation or suitability checks, e-signatures, payment rails, and document acknowledgement.</p></article>
+        <article><span>05</span><h3>Ongoing management</h3><p>Track cap table, holdings, distributions, updates, votes, documents, communications, and investor reporting.</p></article>
+        <article><span>06</span><h3>Future marketplace</h3><p>Allow approved members to request transfers or trade eligible digital positions when legally and technically available.</p></article>
+      </div>
+    </section>
 
-<footer><div class="wrap">
-  <a class="brand" href="/"><span class="mk">✦</span> Pegasus</a>
-  <p class="fnote">Pegasus Private Network · interest and community only, not an offering. Investing involves risk of loss.</p>
-</div></footer>
+    <section id="dashboards" class="section dashboards reveal">
+      <p class="section-index">04 — Platform functions</p>
+      <p class="legal-note left">The capabilities below describe the planned platform. No investment offering, token issuance, trading, payments, or custody is available through this educational website.</p>
+      <h2>The private network needs more than a beautiful website.</h2>
+      <p class="muted max">A real digital asset platform must support both sides of the market: the people issuing or sponsoring assets and the qualified participants reviewing, purchasing, holding, and potentially transferring them.</p>
+      <div class="dashboard-grid">
+        <article class="dashboard-panel">
+          <p class="eyebrow">Investor side</p>
+          <h3>Investor dashboard</h3>
+          <ul>
+            <li>KYC / AML / accreditation check</li>
+            <li>E-signature and document acknowledgement</li>
+            <li>Wallet or account connection</li>
+            <li>Share or token purchase workflow</li>
+            <li>Portfolio status and reporting</li>
+            <li>Investor updates and communication</li>
+            <li>Member-to-member transfer request layer</li>
+          </ul>
+        </article>
+        <article class="dashboard-panel featured-panel">
+          <p class="eyebrow">Pegasus layer</p>
+          <h3>Private network controls</h3>
+          <ul>
+            <li>Member profiles and role-based access</li>
+            <li>Deal presentation rooms</li>
+            <li>Eligibility gating before access</li>
+            <li>Capital partner introductions</li>
+            <li>Compliance-first data room</li>
+            <li>AI-assisted education and navigation</li>
+            <li>Marketplace readiness framework</li>
+          </ul>
+        </article>
+        <article class="dashboard-panel">
+          <p class="eyebrow">Issuer side</p>
+          <h3>Issuer dashboard</h3>
+          <ul>
+            <li>Deal presentation page</li>
+            <li>Share classes, rights, and terms</li>
+            <li>Cap table and token holder records</li>
+            <li>Legal document library</li>
+            <li>Distribution or dividend management</li>
+            <li>Shareholder meetings and voting</li>
+            <li>Investor communication tools</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
-<script>
-(function(){
-  var URL='https://trdwsssouhpawhfdkfqf.supabase.co';
-  var KEY='sb_publishable_hrR8wI6hM921mnxk7bBE_A_YKxWsoBI';
-  var sb=(window.supabase&&window.supabase.createClient)?window.supabase.createClient(URL,KEY):null;
-  function v(id){var el=document.getElementById(id);return el?(el.value||'').trim():'';}
-  function emailOk(x){return /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(x);}
-  function toast(m){var t=document.createElement('div');t.className='toast';t.textContent=m;document.body.appendChild(t);setTimeout(function(){t.style.transition='opacity .4s';t.style.opacity='0';setTimeout(function(){t.remove();},400);},5000);}
+    <section id="issuance" class="section issuance reveal">
+      <p class="section-index">05 — Primary issuance</p>
+      <div class="statement-grid">
+        <h2>Primary issuance is where a real asset becomes a digital asset opportunity.</h2>
+        <div class="text-block">
+          <p>This is the first issuance of digital participation units. The goal is not to “sell coins.” The goal is to present a real asset, define the rights, approve the participants, collect required documents, and record ownership in a cleaner digital environment.</p>
+          <p>For investors, the experience must feel simple. Behind the scenes, the platform must handle eligibility, signatures, documents, payments, records, communication, and compliance.</p>
+        </div>
+      </div>
+      <div class="feature-strip">
+        <span>Deal presentation</span>
+        <span>Documents</span>
+        <span>KYC / AML</span>
+        <span>Accreditation</span>
+        <span>Payments</span>
+        <span>Ownership registry</span>
+      </div>
+    </section>
 
-  window.joinPN=async function(track){
-    var isE=track==='everyday';
-    var errId=isE?'eErr':'aErr',btnId=isE?'eSubmit':'aSubmit';
-    var err=document.getElementById(errId),btn=document.getElementById(btnId);
-    err.textContent='';
-    var name=isE?v('eName'):v('aName');
-    var email=isE?v('eEmail'):v('aEmail');
-    if(!name){err.textContent='Please add your name.';return;}
-    if(!emailOk(email)){err.textContent='Please add a valid email.';return;}
-    if(!sb){err.textContent='Connection unavailable, try again shortly.';return;}
-    btn.disabled=true;btn.textContent='Submitting…';
-    var row=isE
-      ? {track:'everyday',full_name:name,email:email,interest_band:v('eBand'),areas:v('eAreas')}
-      : {track:'accredited',full_name:name,email:email,org_name:v('aOrg'),interest_band:v('aBand'),accredited_self:v('aAcc')};
-    row.source='ppn_standalone';
-    try{
-      var r=await sb.from('private_network_interest').insert(row);
-      if(r.error) throw r.error;
-      var col=document.getElementById(isE?'col-everyday':'col-accredited');
-      col.innerHTML='<div class="done"><div class="chk">✓</div><h3>You’re on the list.</h3>'+
-        '<p>Thank you. We’re building the Private Network community and will reach out at '+email.replace(/[&<>"]/g,'')+' as compliant access opens through licensed partners. No offer is being made now.</p></div>';
-    }catch(e){
-      console.error('[ppn] signup failed:',e);
-      err.textContent=(e&&e.message)||'Could not submit. Please try again.';
-      btn.disabled=false;btn.textContent='Register my interest →';
-    }
-  };
-})();
-</script>
-</body></html>
+    <section class="section program reveal">
+      <p class="section-index">06 — Redevelopment programs</p>
+      <div class="statement-grid compact">
+        <h2>Some opportunities are not one property. They are a program.</h2>
+        <div class="text-block">
+          <p>Pacific Palisades belongs in the platform because it teaches a larger idea: tokenization does not have to stop at one building. A future digital asset structure can represent a carefully organized redevelopment program, subject to legal design, asset selection, risk controls, and participant eligibility.</p>
+          <p>For members, the educational question is simple: what is the asset base, what rights are being offered, how is capital used, how are updates reported, and what future transferability may exist inside the network?</p>
+        </div>
+      </div>
+      <div class="program-grid">
+        <article><span>01</span><h3>Land / lots</h3><p>Individual parcels, land positions, or redevelopment-ready opportunities can become part of a structured thesis.</p></article>
+        <article><span>02</span><h3>Entitlements</h3><p>Design, approvals, permits, and timing become part of the value-creation story.</p></article>
+        <article><span>03</span><h3>Construction</h3><p>Capital can be allocated across phases with reporting, milestones, and controls.</p></article>
+        <article><span>04</span><h3>Exit / income</h3><p>Future sale, hold, refinance, or income strategies define how value may be monetized.</p></article>
+      </div>
+    </section>
+
+
+    <section id="assets" class="section portfolio reveal">
+      <p class="section-index">07 — Asset examples</p>
+      <h2>Examples help people understand what can be digitized — from single assets to redevelopment programs.</h2>
+      <p class="muted max">The assets below are representative examples of real-asset categories that may fit a private digital asset network. They are not active public offerings. Participation, eligibility, token issuance, and tradability are subject to legal, regulatory, and platform approval.</p>
+
+      <div class="project-list">
+        <article class="project-card large">
+          <img src="assets/images/palisades-1.webp" alt="Pacific Palisades redevelopment program concept visual" />
+          <div class="project-copy">
+            <p class="eyebrow">Redevelopment program · Recovery capital · Future digital access</p>
+            <h3>Pacific Palisades</h3>
+            <p>A redevelopment-program example showing how multiple recovery opportunities, land positions, entitlements, construction phases, and future project economics could be organized into a private real-asset digital network.</p>
+            <div class="metrics"><span>Program</span><span>Redevelopment</span><span>Private access</span></div>
+          </div>
+        </article>
+
+        <article class="project-card large">
+          <img src="assets/images/sky-lane-1.webp" alt="Sky Lane future development rendering with pool" />
+          <div class="project-copy">
+            <p class="eyebrow">Future development · Real-asset-backed strategy</p>
+            <h3>Sky Lane</h3>
+            <p>A future development example showing how land, design, construction, and value creation can become a structured digital asset narrative.</p>
+            <div class="metrics"><span>Development</span><span>Value creation</span><span>Future token layer</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/hutton-1.webp" alt="Hutton Place architectural rendering" />
+          <div class="project-copy">
+            <p class="eyebrow">Residential development · Asset creation</p>
+            <h3>Hutton Place</h3>
+            <p>A development example where construction progress, market positioning, and monetization can be organized into a digital asset thesis.</p>
+            <div class="metrics"><span>Build</span><span>Structure</span><span>Exit</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/hollyline-2.webp" alt="Hollyline living room with canyon view" />
+          <div class="project-copy">
+            <p class="eyebrow">Stabilized real asset · Preservation</p>
+            <h3>Hollyline Estate</h3>
+            <p>A stabilized real-asset example focused on scarcity, privacy, location, and long-term value preservation.</p>
+            <div class="metrics"><span>Stabilized</span><span>Scarcity</span><span>Hold</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/noble-1.webp" alt="Noble Avenue exterior" />
+          <div class="project-copy">
+            <p class="eyebrow">Completed asset · Monetization path</p>
+            <h3>Noble Avenue</h3>
+            <p>A completed value-creation example showing how private development can move from capital deployment to monetization.</p>
+            <div class="metrics"><span>Completed</span><span>Residential</span><span>Exit</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="assets/images/missouri-1.webp" alt="Missouri income property exterior" />
+          <div class="project-copy">
+            <p class="eyebrow">Income-producing asset · Stability layer</p>
+            <h3>Missouri Residences</h3>
+            <p>An income-oriented real asset category that can support yield-focused digital asset participation.</p>
+            <div class="metrics"><span>Income</span><span>Stability</span><span>Hold</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="marketplace" class="section marketplace reveal">
+      <p class="section-index">08 — Secondary market</p>
+      <h2>The long-term goal is a private market around digital asset positions.</h2>
+      <div class="tiers">
+        <div class="tier"><h3>Primary access</h3><p>Members discover approved real-asset opportunities through a controlled network.</p><ul><li>Asset previews</li><li>Project briefings</li><li>Eligibility review</li></ul></div>
+        <div class="tier featured"><h3>Digital ownership</h3><p>Qualified participants may access structured asset-backed digital units when offerings are available.</p><ul><li>Tokenized participation</li><li>Digital records</li><li>Private dashboard</li></ul></div>
+        <div class="tier"><h3>Future transferability</h3><p>Marketplace infrastructure may support compliant transfers between approved members.</p><ul><li>Member-to-member requests</li><li>Compliance controls</li><li>Platform approval workflow</li></ul></div>
+      </div>
+    </section>
+
+    <section class="section token-roadmap reveal">
+      <p class="section-index">09 — Pegasus token concept</p>
+      <h2>A network token can become part of the access infrastructure.</h2>
+      <div class="roadmap-grid">
+        <div><span>Phase 01</span><h3>Education</h3><p>Explain real-asset tokenization before asking people to understand advanced digital markets.</p></div>
+        <div><span>Phase 02</span><h3>Private access</h3><p>Build member profiles, role-based access, and qualified participation inside Pegasus Capital Network.</p></div>
+        <div><span>Phase 03</span><h3>Asset tokens</h3><p>Issue asset-backed digital units only where legal structure, disclosures, and compliance allow.</p></div>
+        <div><span>Phase 04</span><h3>Network utility</h3><p>A future Pegasus token may support access, platform utility, governance, and ecosystem participation, subject to legal approval.</p></div>
+      </div>
+    </section>
+
+    <section id="network" class="section network reveal">
+      <p class="section-index">10 — Private network</p>
+      <div class="statement-grid compact">
+        <h2>Designed for capital that values discretion, structure, and access.</h2>
+        <div class="text-block">
+          <p>This is not a public crypto crowd. It is a private network for investors, sponsors, developers, lenders, brokers, and strategic partners who want to review opportunities without unnecessary exposure.</p>
+          <p>The public site teaches the concept. Pegasus Capital Network becomes the operating system: profiles, deal rooms, AI guidance, matching, communication, and platform controls.</p>
+          <a class="inline-link" href="https://pegasuscapitalnetwork.com">Enter Pegasus Capital Network →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section faq reveal">
+      <p class="section-index">11 — FAQ</p>
+      <h2>Questions people should ask before they join.</h2>
+      <div class="faq-list">
+        <details open><summary>What is real-asset tokenization?</summary><p>It is the process of connecting a real asset or asset structure to digital units that can represent participation, records, rights, or access depending on the legal documents.</p></details>
+        <details><summary>What do investors actually own?</summary><p>Ownership depends on the structure. A participant may own units, interests, rights, or economic participation in an entity or asset structure. The documents define the rights — not the marketing language.</p></details>
+        <details><summary>Is this crypto?</summary><p>It may use blockchain or digital ledger tools, but the foundation is the real asset and legal structure. The technology is the infrastructure layer.</p></details>
+        <details><summary>Who can participate?</summary><p>Participation is expected to be limited to qualified or approved members, subject to KYC, AML, investor suitability, accreditation where required, and legal eligibility.</p></details>
+        <details><summary>Can tokens be traded?</summary><p>The long-term goal is controlled transferability inside a private marketplace. Trading, transfers, or resale will depend on securities laws, platform rules, holding periods, eligibility, and regulatory approval.</p></details>
+        <details><summary>How do distributions work?</summary><p>If an asset structure provides income or distributions, those payments would be handled according to the governing documents, ownership records, and platform payment workflow.</p></details>
+        <details><summary>Can a redevelopment program like Pacific Palisades be tokenized?</summary><p>Potentially, but only if the program is properly structured. A redevelopment strategy may include multiple lots, phases, rights, documents, risk disclosures, capital allocations, and reporting. The digital layer should not replace the legal structure — it should make participation, records, and communication easier to manage.</p></details>
+        <details><summary>What is the role of Pegasus Private Network?</summary><p>It is the educational and private access layer: helping members understand real-asset digitization and request access to future network opportunities.</p></details>
+        <details><summary>What is Pegasus Capital Network?</summary><p>It is the operating system layer: profiles, deal rooms, capital matching, AI assistance, investor workflows, and infrastructure for structured real estate capital.</p></details>
+      </div>
+    </section>
+
+    <section class="section gallery reveal">
+      <p class="section-index">12 — Visual asset layer</p>
+      <h2>Real assets remain visible. The ownership layer becomes digital.</h2>
+      <div class="masonry">
+        <img src="assets/images/palisades-1.webp" alt="Pacific Palisades redevelopment program concept visual" />
+        <img src="assets/images/sky-lane-2.webp" alt="Sky Lane aerial rendering" />
+        <img src="assets/images/hutton-3.webp" alt="Hutton Place exterior" />
+        <img src="assets/images/hollyline-4.webp" alt="Hollyline sitting area" />
+        <img src="assets/images/sky-lane-construction-1.webp" alt="Sky Lane construction exterior" />
+        <img src="assets/images/noble-5.webp" alt="Noble pool" />
+        <img src="assets/images/missouri-3.webp" alt="Income property kitchen" />
+      </div>
+    </section>
+
+    <section id="contact" class="section contact reveal">
+      <div>
+        <p class="section-index">13 — Request access</p>
+        <h2>Private access begins with qualification.</h2>
+        <p class="legal-note left">Registration is an expression of interest only, creates no obligation, and does not provide access to an offering. Pegasus does not guarantee returns or liquidity. Tokenized assets may involve loss of principal and limited or no resale market.</p>
+        <p class="legal-note left">Important: This website is for informational and network-access purposes only. It is not an offer to sell securities, tokens, or investment products. Any future offering, token, or marketplace feature will be subject to legal, regulatory, eligibility, disclosure, and compliance requirements.</p>
+      </div>
+      <p class="legal-note left">Pegasus is not a broker-dealer, funding portal, investment adviser, or exchange, and does not raise capital, sell securities, custody assets, or guarantee returns, liquidity, or availability. Any future investment opportunity would be made only through appropriately licensed and registered intermediaries, under Regulation CF, Regulation A+, Regulation D, or other applicable rules, with its own disclosures. Tokenized real estate carries significant risk, including loss of principal and limited or no resale market. Registering interest creates no obligation on either side.</p>
+      <form method="POST" name="request-access" data-netlify="true">
+        <input type="hidden" name="form-name" value="request-access" />
+        <label>Name<input name="name" required /></label>
+        <label>Email<input name="email" type="email" required /></label>
+        <label>I am a<select name="role"><option>Investor</option><option>Developer / Sponsor</option><option>Lender</option><option>Broker</option><option>Strategic Partner</option></select></label>
+        <label>Area of interest<select name="interest"><option>Real asset tokenization</option><option>Digital asset access</option><option>Private network membership</option><option>Capital partnership</option><option>Future marketplace</option></select></label>
+        <label>Message<textarea name="message" rows="5"></textarea></label>
+        <button class="button primary" type="submit">Request Access</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand"><span class="mark">◇</span> PEGASUS <em>Private Network</em></div>
+    <p>A private digital asset network for real assets, redevelopment programs, tokenized access, and future market infrastructure.</p>
+    <a href="https://pegasuscapitalnetwork.com">Pegasus Capital Network →</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
