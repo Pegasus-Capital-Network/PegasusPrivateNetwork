@@ -1,0 +1,53 @@
+name: Website safety
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: website-safety-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+jobs:
+  integrity:
+    name: Site integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - run: python3 -m unittest discover -s tests -v
+      - run: node --check script.js
+      - run: node tests/form-behavior.cjs
+      - run: python3 scripts/build_site.py
+      - name: Ensure only public website files are published
+        run: |
+          test ! -e dist/CLAUDE.md
+          test ! -e dist/AGENTS.md
+          test ! -e dist/.github
+          test ! -e dist/config
+  preview:
+    name: Preview smoke
+    if: github.event_name == 'pull_request'
+    needs: integrity
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify exact preview commit, educational content, form and media
+        env:
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          PR_COMMIT: ${{ github.event.pull_request.head.sha }}
+        run: python3 scripts/verify_preview.py "$PR_NUMBER" "$PR_COMMIT"
+  approval:
+    name: Preview approval
+    if: github.event_name == 'pull_request'
+    needs: [integrity, preview]
+    runs-on: ubuntu-latest
+    environment:
+      name: preview-review
+      url: https://deploy-preview-${{ github.event.pull_request.number }}--vermillion-bavarois-9a6182.netlify.app/
+    steps:
+      - name: Record human preview review
+        run: echo 'Preview approved. This workflow has no Netlify credential and cannot publish production.'
