@@ -1,0 +1,40 @@
+{
+  "site_id": "fcb47e1e-3195-4bfd-be13-20b52b5addf5",
+  "site_name": "vermillion-bavarois-9a6182",
+  "production_url": "https://pegasusprivatenetwork.com/",
+  "required_sections": [
+    "start",
+    "tokenization",
+    "dashboards",
+    "issuance",
+    "assets",
+    "marketplace",
+    "network",
+    "faq",
+    "contact"
+  ],
+  "projects": [
+    "Sky Lane",
+    "Hutton Place",
+    "Hollyline Estate",
+    "Noble Avenue",
+    "Missouri Residences",
+    "Pacific Palisades"
+  ],
+  "assets": {
+    "assets/images/hollyline-2.webp": "a583dadd14b909ceb774554e23b302a66ab9d8dbc86cf5edfed4454e91bebb5f",
+    "assets/images/hollyline-4.webp": "88f01ddf387b1237197030db14b52cedf6c4efbd2a50c4fbba03fa695aafe6c6",
+    "assets/images/hutton-1.webp": "87cd58a807b24f765bf2cb2053e86e42eacd698ae47cbb835c4e89899f4ac182",
+    "assets/images/hutton-3.webp": "600bc5fdfcd7fa48247199da38a6f447adc24aa6ec40b0cfc4f43b607a327102",
+    "assets/images/missouri-1.webp": "3b148beef4ff499567ccc6a73a1a2aa955427d27bfdbacecb389eebd69b2daae",
+    "assets/images/missouri-3.webp": "d64a6a7e2c96d9976df7cbd0f14625518e60433b05777b879f0a67738a867eb9",
+    "assets/images/noble-1.webp": "87bf89e62b1ebb3c62a5ae36fd7e18ddade7d5c4d9854d6eec6ac40eb4309c05",
+    "assets/images/noble-5.webp": "b553f4100c8249e7c5da7ce42d02b929415a4568abb4ead41b604cfda4a3866a",
+    "assets/images/palisades-1.webp": "784c73a31b3cf4b3df4a293f04b1db5eacc16bd94b99285b464a8be511d13176",
+    "assets/images/sky-lane-1.webp": "2622d28b563c56d187bbbfbc22d887928dfb074fd0232554670a1e6132be7c86",
+    "assets/images/sky-lane-2.webp": "4ff55e8ca68abce78f51fcde78b3641eb3ef91b64b1e056686b534a733033edc",
+    "assets/images/sky-lane-construction-1.webp": "0cd9837f6a3f8728b896e3cfd35990ca8ca1a6ce83a8979b9c97f4745cb4b752",
+    "assets/video/hero-poster.jpg": "dfe8b551665ea0f33e2105ce01e843661c9ec388ddc709d4b360dd0f1f9acdda",
+    "assets/video/pegasus-hero-lite.mp4": "210d7c0fc1602fb17afe538930fe961a249ee2f87ae1d82e6e726753e5c745a2"
+  }
+}

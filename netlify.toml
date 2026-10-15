@@ -1,4 +1,4 @@
-# Pegasus Private Network — static site, no build step
+# Existing Pegasus Private Network project only. Keep auto publishing LOCKED.
 [build]
-  publish = "."
-  command = ""
+  publish = "dist"
+  command = "python3 scripts/build_site.py"
