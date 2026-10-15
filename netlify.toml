@@ -1,0 +1,4 @@
+# Pegasus Private Network — static site, no build step
+[build]
+  publish = "."
+  command = ""
